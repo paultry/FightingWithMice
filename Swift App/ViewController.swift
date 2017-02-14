@@ -22,8 +22,7 @@ class ViewController: UIViewController {
     
     @IBAction func pressButtonPressMe(_ sender: Any) {
 
-        print(text1.text!)
-        print(text2.text!)
+        testLabel.text = "\(Double(text2.text!)! + Double(text1.text!)!)"
         
     }
    
