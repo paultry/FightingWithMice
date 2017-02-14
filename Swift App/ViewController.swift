@@ -11,18 +11,20 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    
+
     
     @IBOutlet weak var testLabel: UILabel!
     
-    var pressCount = 0
+    @IBOutlet weak var text1: UITextField!
+  
+    
+    @IBOutlet weak var text2: UITextField!
     
     @IBAction func pressButtonPressMe(_ sender: Any) {
-        pressCount = pressCount + 1
-        if pressCount >= 10 {
-            testLabel.text = "You've pressed 10 times. Good job!"
-            pressCount = 0
-        }
+
+        print(text1.text!)
+        print(text2.text!)
+        
     }
    
     @IBAction func pressButtonNowPressMe(_ sender: Any) {
