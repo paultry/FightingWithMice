@@ -9,11 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+   
+    
+    
+    @IBOutlet weak var testLabel: UILabel!
+    
+    var pressCount = 0
+    
+    @IBAction func pressButtonPressMe(_ sender: Any) {
+        pressCount = pressCount + 1
+        if pressCount >= 10 {
+            testLabel.text = "You've pressed 10 times. Good job!"
+            pressCount = 0
+        }
+    }
+   
+    @IBAction func pressButtonNowPressMe(_ sender: Any) {
+        self.testLabel.text = "Labels are cool!"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
